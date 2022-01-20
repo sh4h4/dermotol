@@ -125,3 +125,209 @@ option{
     color: #24A1CD;
     opacity: 1; 
 }
+
+
+.fixed-content button{
+    background: #53BCE0;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.fixed-content button:hover{
+    background: #24A1CD;
+    color: #fff;
+    transition: .3s;
+}
+
+
+
+
+/* default styling. Nothing to do with freexing first row and column */
+main {display: flex;}
+main > * {border: 1px solid;}
+table {border-collapse: collapse; font-family: helvetica}
+td, th {border:  1px solid;
+      padding: 10px;
+      min-width: 200px;
+      background: white;
+      box-sizing: border-box;
+      text-align: left;
+}
+.table-container {
+  position: relative;
+  max-height:  800px;
+  width: 100%;
+  overflow: scroll;
+}
+
+thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #53BCE0;
+  color: #fff;
+  text-align: center;
+}
+
+thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+tfoot {
+  position: -webkit-sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+tfoot td {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: #53BCE0;
+}
+
+tfoot td:first-child {
+  z-index: 3;
+}
+
+tbody {
+  overflow: scroll;
+  height: 200px;
+}
+
+/* MAKE LEFT COLUMN FIXEZ */
+tr > :first-child {
+  position: -webkit-sticky;
+  position: sticky; 
+  left: 0; 
+}
+/* don't do this */
+tr > :first-child {
+  box-shadow: inset 0px 1px black;
+}
+
+
+
+
+details {
+    position: relative;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details summary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=")
+      no-repeat 50% 50% / 1em 1em;
+    width: 1.5em;
+    height: 1.5em;
+    transition: transform 0.1s linear;
+  }
+  
+  summary {
+    width: 100%;
+    padding: 20px;
+    padding-left: 25px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  summary:hover {
+    color: #007bff;
+  }
+  
+  summary:focus {
+    outline: none;
+  }
+  
+  details[open] summary:before {
+    transform: rotate(90deg);
+  }
+  
+  details[open] > summary {
+    color: #007bff;
+  }
+  
+  details[open] > summary ~ * {
+    animation: open 1s ease;
+  }
+  
+  p.source {
+    padding-top: 50px;
+    font-size: 0.75em;
+    text-align: center;
+  }
+  
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+  
+.center { text-align: center; }
+
+.container00 {
+  width: 95%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+}
+
+.episode__number {
+  font-size: 10vw;
+  font-weight: 600;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+.episode__content {
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+.episode__content .title {
+  font-weight: 600
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
+}
