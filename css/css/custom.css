@@ -331,3 +331,67 @@ details {
     font-size: 15px;
   }
 }
+
+
+
+
+
+
+.uk-timeline .uk-timeline-item .uk-card {
+	max-height: 300px;
+}
+
+.uk-timeline .uk-timeline-item {
+    display: flex;
+    position: relative;
+}
+
+.uk-timeline .uk-timeline-item::before {
+    background: #dadee4;
+    content: "";
+    height: 100%;
+    left: 19px;
+    position: absolute;
+    top: 20px;
+    width: 2px;
+		z-index: -1;
+}
+
+.uk-timeline .uk-timeline-item .uk-timeline-icon .uk-badge {
+		margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+.uk-badge {
+    box-sizing: border-box;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 5px;
+    border-radius: 500px;
+    vertical-align: middle;
+    background: #1e87f0;
+    color: #fff;
+    font-size: .875rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.uk-badge i{
+  margin: 0;
+}
+
+.uk-timeline .uk-timeline-item .uk-timeline-content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;    
+    box-shadow: 0 0 10px #d1d1d1;
+    margin: 20px 0;
+    background-color: #fff;
+}
+.uk-grid-small{
+}
+.uk-card-header{
+  border-bottom: 1px solid #E5E5E5;
+}
+.uk-flex-middle, .uk-card-body{
+  padding: 0 0 0 1em;
+}
