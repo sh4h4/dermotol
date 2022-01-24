@@ -1,4 +1,4 @@
-.menu div{
+.menu>div{
     position: absolute;
 }
 .dropdown2{
@@ -16,7 +16,6 @@
     display: block;
     padding: 15px 20px;
     color: #000;    
-    
 }
 
 .belisimo{
@@ -196,7 +195,7 @@ tfoot td:first-child {
 
 tbody {
   overflow: scroll;
-  height: 200px;
+  height: 500px;
 }
 
 /* MAKE LEFT COLUMN FIXEZ */
@@ -395,3 +394,45 @@ details {
 .uk-flex-middle, .uk-card-body{
   padding: 0 0 0 1em;
 }
+
+.r-inner{
+  position: relative;
+  z-index: 20;
+  display: block;
+}
+
+.right-dropdown{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  left:400px;
+  top: 0;
+  width: 400px !important;
+  transition: .3s;
+  list-style: none;
+  background: #fff;
+  z-index: -19;
+}
+
+.right-dropdown li a{
+  padding: 10px 20px;
+}
+
+.r-inner:hover .right-dropdown{
+  left: 250px;
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.io{
+  position: relative;
+}
+.io i{
+  position: absolute;
+  right: 8px;
+  top: 20px;
+}
+
+
